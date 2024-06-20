@@ -4,7 +4,7 @@ HollowNGo.exe -encode <source.exe> -output <output.txt>
 example: HollowNGo.exe C:\Users\User\Documents\MyEvil.Exe -output EvilB64.txt
 
 HollowNGo.exe -source <base64_content> -target <target.exe>
-Example: dotnet inline-execute HollowNGo.exe -source <EvilB64Code> -target C:\Windows\System32\calc.exe
+Example: dotnet inline-execute HollowNGo.exe -source <EvilB64.Code> -target C:\Windows\System32\calc.exe
 
 
 GhostGrip_WMI creates a WMIEventSubscription for your prefered event for persistence. Use HollowNGo prior to set up your executable to avoid FileCreation Events.

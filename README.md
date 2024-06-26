@@ -60,3 +60,5 @@ Host2IP aims to be a little less noisy than SMB/ICMP scans to find hosts within 
 	GhostGrip WMI Havoc example
 </div>
 <br>
+
+### **Disclaimer:** These tools are not to be used for any unauthorized activity :)

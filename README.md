@@ -1,3 +1,8 @@
+![Alt text](SHARP.png) /examples/ ![](SHARP.png)
+
+
+
+
 HollowNGo aims to avoid FileCreation Events by reading your payload as a byte array, compressing them, and converting the compressed bytes to base64 to a memorysteam. setting the target file stream length to 0, then the same encoding operation in reverse to write to the target file. There are a few options when running the tool as shown below.
 
 Create compressed encoded binary data (This is expected to run on your dev box not the target)

@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://github.com/MrR4tC4k3/SharpC4k3s/blob/b825632945a7a26b496f8f9cf7cad4e87674cef8/examples/SHARP.png">
+	<img src="https://github.com/MrR4tC4k3/SharpC4k3s/blob/90aed9430f5944f569a7e0a0c2caf2a1a47c7b37/examples/SHARPCAKES.png">
 </div>
 <div align="center">
 	Welcome to SharpC4k3s
@@ -11,10 +11,12 @@
 - **GhostGrip WMI**
 - **Host2IP**
 
-## HollowNGO
-HollowNGo aims to avoid FileCreation Events by reading your payload as a byte array, compressing them, and converting the compressed bytes to base64 to a memorysteam. setting the target file stream length to 0, then the same encoding operation in reverse to write to the target file. There are a few options when running the tool as shown below.
+The SharpC4k3 Suite was designed to be executed inline, however like any C# Program they be used standalone also. All Tools leverage .Net v2 to ensure compatibility with target hosts.
 
-#### Create compressed encoded binary data (This is expected to run on your dev box not the target)
+## HollowNGO
+HollowNGo aims to avoid FileCreation Events by utilising and hijacking files that already exist on disk. This is achieved by reading your payload as a compressed byte array and converting it to base64 which is then stored in a memorysteam. HollowNGo then sets the target file stream length to 0, and using the orignal encoding operation in reverse, writes to the target file. There are a few options when running the tool as shown below. Note that creating the encoded binary data locally (-encode) it is expected to run on your dev box not the target.
+
+#### Create compressed encoded binary data
 **Usage:** HollowNGo.exe -encode <source.exe> -output <output.txt>
 - **Example:** HollowNGo.exe C:\Users\User\Documents\MyEvil.Exe -output EvilB64.txt
 
@@ -34,7 +36,7 @@ HollowNGo aims to avoid FileCreation Events by reading your payload as a byte ar
 <br>
 
 ## GhostGrip WMI
-GhostGrip WMI creates a WMIEventSubscription for your prefered event for persistence and execution method. Use HollowNGo prior to set up your executable to avoid FileCreation Events.
+GhostGrip WMI aims to simplify the process of setting WMI persistence on your target with easy to use flag options. Ghost Grip WMI creates a WMIEventSubscription based on your prefered event for persistence as well as its execution method. Use HollowNGo prior to set up your executable to avoid FileCreation Events.
 
 **Usage:** GhostGrip_WMI.exe -location <path_to_executable> -type <time/logon/eventcode> -execution <executiontype> -randomizename <true/false>
 - **Example:** dotnet inline-exeucte GhostGrip_WMI.exe -location C:\Windows\System32\calc.exe -type eventcode -eventcode 4726 -execution direct -randomizename true
@@ -48,7 +50,7 @@ GhostGrip WMI creates a WMIEventSubscription for your prefered event for persist
 <br>
 
 ## Host2IP
-Host2IP aims to be a little less noisy than SMB/ICMP scans to find hosts within a domain environment. Host2IP uses LDAP queries to get a list of hostnames, which are then resolved via DNS, achieved via slow/fast mode to control the network traffic rate. If your current process does not have not have the correct domain priviliges you will have to provide credentials.
+Host2IP aims to be a little less noisy than the traditional SMB/ICMP scans to find hosts within a domain environment. Host2IP uses LDAP queries to generate a list of hostnames, the list is then resolved via DNS. This can be achieved via -mode flag with slow/fast options to control the network traffic rate. If your current process does not have not have the correct domain priviliges you will have to provide credentials.
 
 **Usage:** Host2IP.exe -domain <domain_name> -mode <fast/slow> -auth <true/false> -user <username> -password <password>
 - **Example:** dotnet inline-execute Host2IP.exe -domain target.local -mode fast -auth false
@@ -57,7 +59,7 @@ Host2IP aims to be a little less noisy than SMB/ICMP scans to find hosts within 
 	<img src="https://github.com/MrR4tC4k3/SharpC4k3s/blob/64cd688e35ab726ded7a11669a85463f3dfbd857/examples/Host2IP.png">
 </div>
 <div align="center">
-	GhostGrip WMI Havoc example
+	Host2IP Havoc example
 </div>
 <br>
 

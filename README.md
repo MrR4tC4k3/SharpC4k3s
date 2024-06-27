@@ -10,6 +10,7 @@
 - **HollowNGo**
 - **GhostGrip WMI**
 - **Host2IP**
+-  **NibbleNibble**
 
 The SharpC4k3 Suite was designed to be executed inline, however like any C# Program they be used standalone also. All Tools leverage .Net v2 to ensure compatibility with target hosts.
 
@@ -62,5 +63,11 @@ Host2IP aims to be a little less noisy than the traditional SMB/ICMP scans to fi
 	Host2IP Havoc example
 </div>
 <br>
+
+## NibbleNibble
+A somewhat pointless tool, NibbleNibble simply recursively sets target files stream length to 0 from a given directory path.
+
+**Usage:** NibbleNibble.exe -path <TargetStartPath>
+- **Example:** dotnet inline-execute NibbleNibble.exe -path C:\Users
 
 ### **Disclaimer:** These tools are not to be used for any unauthorized activity :)

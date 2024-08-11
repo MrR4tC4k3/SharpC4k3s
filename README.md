@@ -50,20 +50,6 @@ GhostGrip WMI aims to simplify the process of setting WMI persistence on your ta
 </div>
 <br>
 
-## Host2IP
-Host2IP aims to be a little less noisy than the traditional SMB/ICMP scans to find hosts within a domain environment. Host2IP uses LDAP queries to generate a list of hostnames, the list is then resolved via DNS. This can be achieved via -mode flag with slow/fast options to control the network traffic rate. If your current process does not have not have the correct domain priviliges you will have to provide credentials.
-
-**Usage:** Host2IP.exe -domain <domain_name> -mode <fast/slow> -auth <true/false> -user <username> -password <password>
-- **Example:** dotnet inline-execute Host2IP.exe -domain target.local -mode fast -auth false
-- **Example:** dotnet inline-execute Host2IP.exe -domain target.locol -mode slow -auth true -user TheRat -password pass123!
-<div align="center">
-	<img src="https://github.com/MrR4tC4k3/SharpC4k3s/blob/64cd688e35ab726ded7a11669a85463f3dfbd857/examples/Host2IP.png">
-</div>
-<div align="center">
-	Host2IP Havoc example
-</div>
-<br>
-
 ## NibbleNibble
 A somewhat pointless tool, NibbleNibble simply recursively sets target files stream length to 0 from a given directory path.
 
